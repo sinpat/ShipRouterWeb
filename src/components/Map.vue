@@ -26,7 +26,7 @@
           </v-btn>
         </v-card>
       </l-control>
-      <l-polyline v-if="path" :lat-lngs="path"></l-polyline>
+      <l-polyline v-if="path" :lat-lngs="path.coordinates"></l-polyline>
       <l-marker v-if="start" :lat-lng="start"></l-marker>
       <l-marker v-if="destination" :lat-lng="destination"></l-marker>
     </l-map>
