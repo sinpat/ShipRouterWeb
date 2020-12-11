@@ -1,6 +1,6 @@
 # ship-router-web
 
-Web Client for the ship-routing project
+Web Client for the [ShipRouter](https://github.com/DarkWingMcQuack/ShipRouter) project
 
 ## Project setup
 
