@@ -26,7 +26,11 @@
           </v-btn>
         </v-card>
       </l-control>
-      <l-polyline v-if="path" :lat-lngs="path.coordinates"></l-polyline>
+      <l-polyline v-if="path" :lat-lngs="path.coordinates">
+        <l-tooltip>
+          <strong>Distance: {{ path.distance }}m</strong>
+        </l-tooltip>
+      </l-polyline>
       <l-marker v-if="start" :lat-lng="start"></l-marker>
       <l-marker v-if="destination" :lat-lng="destination"></l-marker>
     </l-map>
@@ -46,6 +50,7 @@ import {
   LTileLayer,
   LPolyline,
   LMarker,
+  LTooltip,
 } from 'vue2-leaflet';
 
 import { Coordinate, Path } from '@/types';
@@ -59,6 +64,7 @@ import { Coordinate, Path } from '@/types';
     LTileLayer,
     LPolyline,
     LMarker,
+    LTooltip,
   },
 })
 export default class RoutingMap extends Vue {
