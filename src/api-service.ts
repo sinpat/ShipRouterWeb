@@ -24,10 +24,17 @@ class ApiService {
         target,
       },
     }).then(({ data }) => {
-      if (!data.lats.length || !data.lngs.length) {
+      const { lats, lngs, distance } = data;
+      if (!lats.length || !lngs.length) {
         throw new Error('Could not find shortest path');
       }
-      return data;
+      return {
+        coordinates: lats.map((lat, idx) => ({
+          lat,
+          lng: lngs[idx],
+        })),
+        distance,
+      };
     });
   }
 }

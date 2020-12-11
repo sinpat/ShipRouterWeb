@@ -4,7 +4,6 @@ export type Coordinate = {
 };
 
 export type Path = {
-  lats: number[];
-  lngs: number[];
+  coordinates: Coordinate[];
   distance: number;
 };

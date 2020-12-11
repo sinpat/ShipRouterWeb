@@ -54,7 +54,10 @@ export default class Routing extends Vue {
     // this.path = (
     //   await apiService.shortestPath(this.start, this.destination)
     // ).data;
-    this.path = [this.start, this.destination];
+    this.path = {
+      coordinates: [this.start, this.destination],
+      distance: 0,
+    };
   }
 }
 </script>
