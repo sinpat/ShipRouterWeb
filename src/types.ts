@@ -3,4 +3,8 @@ export type Coordinate = {
   lng: number;
 };
 
-export type Path = Coordinate[];
+export type Path = {
+  lats: number[];
+  lngs: number[];
+  distance: number;
+};
